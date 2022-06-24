@@ -31,11 +31,11 @@ function App() {
     {/* <ListMap /> */}
     {/* <Stylesheet colorName='primary'/> */}
     {/* <Inline /> */}
-    {/* <FormValidate /> */}
+    <FormValidate />
     {/* <StyledButton /> */}
     {/* <FormInput /> */}
     {/* <Form /> */}
-    <CheckBox />
+    {/* <CheckBox /> */}
     </div>
   );
 }

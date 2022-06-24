@@ -7,6 +7,7 @@ export default class CheckBox extends Component {
       this.state = {
         name:'',
         file:'',
+        gender: '',
         skills: {
             html: false,
             css: false,
@@ -27,6 +28,7 @@ export default class CheckBox extends Component {
               }
           }, ()=> console.log(this.state.skills))
         }
+
         if(type === 'file'){
           this.setState({
             file: files
@@ -77,6 +79,44 @@ export default class CheckBox extends Component {
           <input type="file"  onChange={this.handleChange} />
           {/* multiple files */}
           <input type="file"  onChange={this.handleChange} multiple/>
+
+          {/* radio buttons */}
+          <div>
+            <p>Gender</p>
+            <div>
+              <input
+                type='radio'
+                id='female'
+                name='gender'
+                value='Female'
+                onChange={this.handleChange}
+                checked={this.state.gender === 'Female'}
+              />
+              <label htmlFor='female'>Female</label>
+            </div>
+            <div>
+              <input
+                id='male'
+                type='radio'
+                name='gender'
+                value='Male'
+                onChange={this.handleChange}
+                checked={this.state.gender === 'Male'}
+              />
+              <label htmlFor='male'>Male</label>
+            </div>
+            <div>
+              <input
+                id='other'
+                type='radio'
+                name='gender'
+                value='Other'
+                onChange={this.handleChange}
+                checked={this.state.gender === 'Other'}
+              />
+              <label htmlFor='other'>Other</label>
+            </div>
+          </div>
         </form>
       </div>
     )
