@@ -1,0 +1,27 @@
+.slider{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrowLeft{
+    position: absolute;
+    top:50%;
+    left:32px;
+    z-index: 10;
+    color:#000;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+.arrowRight{
+    position: absolute;
+    top:50%;
+    right: 32px;
+    z-index: 10;
+    color:#000;
+    font-size: 50px;
+    cursor: pointer;
+}
