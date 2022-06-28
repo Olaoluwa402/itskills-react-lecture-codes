@@ -4,6 +4,8 @@ import {
   TiSocialGithubCircular,
   TiSocialTwitterCircular,
 } from 'react-icons/ti'
+import {WiCloudyWindy, } from 'react-icons/wi'
+import {FaConfluence} from 'react-icons/fa'
 
 const Footer = () => {
     return(
@@ -13,6 +15,8 @@ const Footer = () => {
             <TiSocialLinkedinCircular />
             <TiSocialGithubCircular />
             <TiSocialTwitterCircular />
+            <WiCloudyWindy />
+            <FaConfluence />
         </div>
         <div>
             <small> Copyright &copy; {new Date().getFullYear()} </small>

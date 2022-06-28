@@ -20,11 +20,18 @@ import FormInput from './components/FormInput-2';
 import CheckBox from './components/CheckBox';
 import RefInput from './components/RefInput';
 import LifeCycleM from './components/LifeCycleM';
-import Axios from './components/AXIOS/Axios';
+// import Axios from './components/AXIOS/Axios';
+import Button from './components/HOC2/Button';
+import Button2 from './components/HOC2/Button2';
+import Button3 from './components/HOC2/Button3';
+import Icons from './components/react-icons'
+import Sass from './components/SASS/Sass';
+import ClickCounter from './components/HigherOrderComponent/ClickCounter';
+import HoverCounter from './components/HigherOrderComponent/HoverCounter';
+import ButtonC from './components/HigherOrderComponent/Button2'
 
 
 function App() {
-
   return ( 
     <div className="App">
      {/* <Counter /> */}
@@ -42,7 +49,15 @@ function App() {
     {/* <FormInput /> */}
     {/* <Form /> */}
     {/* <CheckBox /> */}
-   <Axios />
+   {/* <Axios /> */}
+   {/* <Button text='Button enhanced by HOC'/>
+   <Button2 text='Ordinary Button with no HOC'/>
+   <Button3 text='Button enhanced by HOC' /> */}
+   {/* <Icons />
+   <Sass /> */}
+   <ClickCounter nam='John'/>
+   <HoverCounter />
+   <ButtonC />
     </div>
   );
 }
