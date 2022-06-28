@@ -18,10 +18,14 @@ import StyledButton from './components/StyledButton';
 import FormInput from './components/FormInput-2';
 // import Form from './components/formData';
 import CheckBox from './components/CheckBox';
+import RefInput from './components/RefInput';
+import LifeCycleM from './components/LifeCycleM';
+import Axios from './components/AXIOS/Axios';
+
 
 function App() {
 
-  return (
+  return ( 
     <div className="App">
      {/* <Counter /> */}
      {/* <OnClick /> */}
@@ -31,11 +35,14 @@ function App() {
     {/* <ListMap /> */}
     {/* <Stylesheet colorName='primary'/> */}
     {/* <Inline /> */}
-    <FormValidate />
+    {/* <FormValidate /> */}
+    {/* <RefInput /> */}
+    {/* <LifeCycleM /> */}
     {/* <StyledButton /> */}
     {/* <FormInput /> */}
     {/* <Form /> */}
     {/* <CheckBox /> */}
+   <Axios />
     </div>
   );
 }
