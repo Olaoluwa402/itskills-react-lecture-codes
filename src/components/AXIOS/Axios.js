@@ -15,27 +15,30 @@ class Axios extends Component {
   
   componentDidMount() {
     const API_KEY_YELP = ''
-    const API_URL = 'https://restcountries.com/v3.1/all'
+    const API_URL = 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,relativehumidity_2m,windspeed_10m'
     const apiOptions = {
       headers: {
          "Content-Type": "Application/json",
         // Authorization:`Bearer ${API_KEY_YELP}`
       },
     };
+    
     axios
       .get(API_URL, {}, apiOptions)
       .then((response) => {
         const {data} = response
         console.log('2. response', data)
-        this.setState({
-          data: data,
-        }, ()=>  console.log('3. current state', this.state.data))
-        console.log('1. default state', this.state.data)
+        // this.setState({
+        //   data: data,
+        // }, ()=>  console.log('3. current state', this.state.data))
+        // console.log('1. default state', this.state.data)
       })
       .catch((error) => {
         console.log(error)
       })
   }
+
+
 
   render() {
     // console.log('1. default state', data)

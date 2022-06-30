@@ -1,65 +1,35 @@
+import React, { Component } from 'react'
+import {Routes, Route, Navigate, NavLink} from 'react-router-dom'
 
-import './App.css'; 
-// import Greet from './components/Greet';
-// import Button from './components/Button';
-// import Welcome from './components/welcome';
-// import Counter from './components/Counter';
-import OnClick from './components/OnClick';
-import ConditionalRendering from './components/Conditional_Rendering';
-import ListItems from './components/ListItems';
-import Advert from './components/advert/advert';
-import Inline from './components/Inline';
-import ButtonComponent from './components/ButtonComponent';
-import ListMap from './components/listMap';
-import Stylesheet from './components/Stylesheet';
-import FormValidate from './components/formValidate';
-import ModuleStyle from './components/moduleStyle';
-import StyledButton from './components/StyledButton';
-import FormInput from './components/FormInput-2';
-// import Form from './components/formData';
-import CheckBox from './components/CheckBox';
-import RefInput from './components/RefInput';
-import LifeCycleM from './components/LifeCycleM';
-// import Axios from './components/AXIOS/Axios';
-import Button from './components/HOC2/Button';
-import Button2 from './components/HOC2/Button2';
-import Button3 from './components/HOC2/Button3';
-import Icons from './components/react-icons'
-import Sass from './components/SASS/Sass';
-import ClickCounter from './components/HigherOrderComponent/ClickCounter';
-import HoverCounter from './components/HigherOrderComponent/HoverCounter';
-import ButtonC from './components/HigherOrderComponent/Button2'
+const Home = () => (<h2>Home</h2>)
+const About = () => (<h2>About</h2>)
+const Contact= () => (<h2>Contact</h2>)
+const Challenges = () => (<h2>Challenges</h2>)
+const NotFound = () => (<h2>NotFound </h2>)
+class App extends Component {
+     render() {
+    return (
+        <div className='App'>
+          <ul>
+            <li><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/about'>About</NavLink></li>
+            <li><NavLink to='/contact'>Contact</NavLink></li>
+            <li><NavLink to='/challenges'>Challenges</NavLink></li>
 
+          </ul>
+          <Routes>
+              <Route path='/' element={<Home />}/>
+              <Route path='/about' element={<About />}/>
+              <Route path='/contact' element={<Contact />}/>
+              <Route path='/challenges' element={<Challenges />}/>
+              <Route path='/not-found' element={<NotFound />}/>
 
-function App() {
-  return ( 
-    <div className="App">
-     {/* <Counter /> */}
-     {/* <OnClick /> */}
-     {/* <ConditionalRendering  /> */}
-     {/* <ListItems /> */}
-     {/* <Advert /> */}
-    {/* <ListMap /> */}
-    {/* <Stylesheet colorName='primary'/> */}
-    {/* <Inline /> */}
-    {/* <FormValidate /> */}
-    {/* <RefInput /> */}
-    {/* <LifeCycleM /> */}
-    {/* <StyledButton /> */}
-    {/* <FormInput /> */}
-    {/* <Form /> */}
-    {/* <CheckBox /> */}
-   {/* <Axios /> */}
-   {/* <Button text='Button enhanced by HOC'/>
-   <Button2 text='Ordinary Button with no HOC'/>
-   <Button3 text='Button enhanced by HOC' /> */}
-   {/* <Icons />
-   <Sass /> */}
-   <ClickCounter nam='John'/>
-   <HoverCounter />
-   <ButtonC />
-    </div>
-  );
+              <Route path='*' element={<Navigate to='/not-found'/>}/>
+          </Routes>
+           
+        </div>
+    )
+  }
 }
 
-export default App;
+export default App

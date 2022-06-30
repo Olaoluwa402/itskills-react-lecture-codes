@@ -1,31 +1,28 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
-const HOC = (OriginalComponent, color)=>{
- console.log(color)
-    class NewComponent extends Component{
+const HOC = (Component) => {
+    console.log(Component)
+     class NewComponent extends Component{
         constructor(props) {
             super(props)
           
             this.state = {
-               count:0
+               count:0,
             }
-      
-            this.counterHandler = this.counterHandler.bind(this)
+            this.clickCounter = this.clickCounter.bind(this)
           }
-      
-          counterHandler(){
+       
+          clickCounter(){
              this.setState((prev)=> ({
-                  count:prev.count + 1
+               count: prev.count + 1
              }))
           }
             render(){
 
-                return <OriginalComponent {...this.props} count={this.state.count} counterHandler={this.counterHandler}/>
+                return <Component {...this.props} method={this.clickCounter} count={this.state.count}/>
             }
     }
-
     return NewComponent
 }
 
-export default HOC
-
+export default HOC 

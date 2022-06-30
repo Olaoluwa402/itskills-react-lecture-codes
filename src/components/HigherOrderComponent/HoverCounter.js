@@ -4,10 +4,10 @@ import HOC from './HOC'
  class HoverCounter extends Component {
     
   render() {
-    const {count, counterHandler} = this.props
+    const {count, method} = this.props
     return (
       <div>
-        <button onMouseOut={counterHandler}>Clicked {count} times</button>
+        <button onMouseOut={method}>Clicked {count} times</button>
       </div>
     )
   }
